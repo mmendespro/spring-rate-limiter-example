@@ -35,3 +35,16 @@ Lets consider a simple compute-service application which provides below endpoint
 
 - /double/{input}: doubles the given input. Unlimited calls allowed.
 - /square/{input}: calculates the square of the given input. Limited calls only. Max 5 calls per minute.
+
+## Technologies Stack
+
+- Java SDK 21
+- Spring Boot Framework
+- Resilience4j
+- Docker
+
+## Licences
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
