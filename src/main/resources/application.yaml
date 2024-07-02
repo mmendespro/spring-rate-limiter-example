@@ -1,0 +1,16 @@
+server:
+  port: 8080
+  
+spring:
+  application:
+    name: rate-limiter
+  threads:
+    virtual:
+      enabled: true
+---
+resilience4j.ratelimiter:
+  instances:
+    squareLimit:
+      limitForPeriod: 5
+      limitRefreshPeriod: 60s
+      timeoutDuration: 0

@@ -1,0 +1,7 @@
+####
+# Unlimited calls
+GET http://localhost:8080/double/10
+
+####
+# Max 5 calls per minute
+GET http://localhost:8080/square/10
