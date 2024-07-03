@@ -1,4 +1,4 @@
-![Logo](./docs/imgs/spring-boot.png)
+![Logo](./imgs/spring-boot.png)
 
 # Rate Limiter Pattern With Spring Boot
 
@@ -14,11 +14,11 @@ Ability of the system to recover from such failures and remain functional makes 
 
 In Microservice architecture, when there are multiple services (A, B, C & D), one service (A) might depend on the other service (B) which in turn might depend on C and so on. Let’s consider this example. We have 2 services A and B.  Service A depends on Service B. The Service B has to do a lot of **CPU/IO intensive work** for the requests it receives. So it usually takes time to respond because of the nature of its work. Service B has a limit on max number of requests it can handle within the given time window.
 
-![ResilienceA](./docs/imgs/resilience-example-a.png)
+![ResilienceA](./imgs/resilience-example-a.png)
 
 Now the problem is – Service A receives a lot of requests occasionally and for every request if we depend on Service B, It could add too much load on Service B which could bring the service down. As a defensive measure, Service B wanted to protect itself from receiving too many requests by rejecting calls it can not handle.
 
-![ResilienceA](./docs/imgs/resilience-example-b.png)
+![ResilienceB](./imgs/resilience-example-b.png)
 
 **Rate Limiter Pattern** helps us to make our services highly available just by limiting the number of calls we could make/process in a specific window. In other words, It helps us to control the throughput. When we receive too many requests, the Service might simply reject the call. The client has to retry at a later time or can go with some default/cached values.
 
